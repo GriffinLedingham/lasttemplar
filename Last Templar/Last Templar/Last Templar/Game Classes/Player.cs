@@ -22,7 +22,7 @@ namespace Last_Templar.Game_Classes
             position = posIn;
 
             //Assign square's rectangle refence (this gives the square an X,Y coordinate, as well as a height and a width)
-            rectangle = new Rectangle(posIn.X(), posIn.Y(), width_in, height_in);
+            rectangle = new Rectangle((int)posIn.X, (int)posIn.Y, width_in, height_in);
 
             //Give the square a color for when you want to draw it to the screen
             color = Color.Red;

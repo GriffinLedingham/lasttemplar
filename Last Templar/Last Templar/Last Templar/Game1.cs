@@ -36,7 +36,7 @@ namespace Last_Templar
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            p1 = new Player(new Vector2(1,1), GraphicsDevice);
+            p1 = new Player(new Vector2(100,100),100,100, GraphicsDevice);
             base.Initialize();
         }
 
