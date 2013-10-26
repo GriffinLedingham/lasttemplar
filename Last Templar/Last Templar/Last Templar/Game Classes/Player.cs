@@ -9,18 +9,27 @@ namespace Last_Templar.Game_Classes
 {
     class Player
     {
+        //Declare the object's variables it will use
         Vector2 position;
-        Texture2D dummyTexture;
-        Rectangle dummyRectangle;
-        Color Colori;
+        Texture2D texture;
+        Rectangle rectangle;
+        Color color;
 
-        public Player(Vector2 posIn, GraphicsDevice gd)
+        //This is the object's constructor, it takes in a vector (X position, Y position), a width, and a height
+        public Player(Vector2 posIn, int width_in, int height_in, GraphicsDevice gd)
         {
+            //Assign square's position
             position = posIn;
-            dummyRectangle = new Rectangle(100,100,100,100);
-            Colori = Color.Red;
-            dummyTexture = new Texture2D(gd, 1, 1);
-            dummyTexture.SetData(new Color[] { Color.White });
+
+            //Assign square's rectangle refence (this gives the square an X,Y coordinate, as well as a height and a width)
+            rectangle = new Rectangle(posIn.X(), posIn.Y(), width_in, height_in);
+
+            //Give the square a color for when you want to draw it to the screen
+            color = Color.Red;
+
+            //Create a sample 1x1 white pixel, which we will color below when it comes time to actually draw the object
+            texture = new Texture2D(gd, 1, 1);
+            texture.SetData(new Color[] { Color.White });
         }
 
         public void update()
@@ -30,8 +39,10 @@ namespace Last_Templar.Game_Classes
 
         public void draw(SpriteBatch sb)
         {
+            //Start sprite batch for drawing (you need to start and end a sprite batch any time you want to draw anything
             sb.Begin();
-                sb.Draw(dummyTexture, dummyRectangle, Colori);
+                //Draw a new object, using our 1x1 pixel as the texture, our rectangle for the shape, and our color for the object's color
+                sb.Draw(texture, rectangle, color);
             sb.End();
         }
     }
