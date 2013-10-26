@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Last_Templar.Game_Classes;
 
 namespace Last_Templar
 {
@@ -18,6 +19,7 @@ namespace Last_Templar
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Player p1;
 
         public Game1()
         {
@@ -34,7 +36,7 @@ namespace Last_Templar
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            p1 = new Player(new Vector2(1,1), GraphicsDevice);
             base.Initialize();
         }
 
@@ -84,7 +86,7 @@ namespace Last_Templar
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            p1.draw(spriteBatch);
             base.Draw(gameTime);
         }
     }
