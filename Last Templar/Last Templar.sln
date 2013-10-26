@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last Templar", "Last Templar\Last Templar\Last Templar.csproj", "{968F7755-AEE7-4DA3-BB12-308DA8D656BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last Templar", "Last Templar\Last Templar\Last Templar.csproj", "{C97288DB-C1A1-46F7-91CB-1CDC05A4A4E7}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Last TemplarContent", "Last Templar\Last TemplarContent\Last TemplarContent.contentproj", "{384A21E4-8835-4569-99B4-73C901B96F97}"
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Last TemplarContent", "Last Templar\Last TemplarContent\Last TemplarContent.contentproj", "{8E49A80D-C0AD-487E-8AA6-B59E6DAA20F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,12 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{968F7755-AEE7-4DA3-BB12-308DA8D656BE}.Debug|x86.ActiveCfg = Debug|x86
-		{968F7755-AEE7-4DA3-BB12-308DA8D656BE}.Debug|x86.Build.0 = Debug|x86
-		{968F7755-AEE7-4DA3-BB12-308DA8D656BE}.Release|x86.ActiveCfg = Release|x86
-		{968F7755-AEE7-4DA3-BB12-308DA8D656BE}.Release|x86.Build.0 = Release|x86
-		{384A21E4-8835-4569-99B4-73C901B96F97}.Debug|x86.ActiveCfg = Debug|x86
-		{384A21E4-8835-4569-99B4-73C901B96F97}.Release|x86.ActiveCfg = Release|x86
+		{C97288DB-C1A1-46F7-91CB-1CDC05A4A4E7}.Debug|x86.ActiveCfg = Debug|x86
+		{C97288DB-C1A1-46F7-91CB-1CDC05A4A4E7}.Debug|x86.Build.0 = Debug|x86
+		{C97288DB-C1A1-46F7-91CB-1CDC05A4A4E7}.Release|x86.ActiveCfg = Release|x86
+		{C97288DB-C1A1-46F7-91CB-1CDC05A4A4E7}.Release|x86.Build.0 = Release|x86
+		{8E49A80D-C0AD-487E-8AA6-B59E6DAA20F5}.Debug|x86.ActiveCfg = Debug|x86
+		{8E49A80D-C0AD-487E-8AA6-B59E6DAA20F5}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
