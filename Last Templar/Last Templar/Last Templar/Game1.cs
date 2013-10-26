@@ -20,6 +20,7 @@ namespace Last_Templar
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Player p1;
+        KeyboardState keyState;
 
         public Game1()
         {
@@ -73,6 +74,26 @@ namespace Last_Templar
                 this.Exit();
 
             // TODO: Add your update logic here
+            keyState = Keyboard.GetState();
+
+            if (keyState.IsKeyDown(Keys.Left))
+            {
+                p1.keyPressed(Keys.Left);
+            }
+            if (keyState.IsKeyDown(Keys.Right))
+            {
+                p1.keyPressed(Keys.Right);
+            }
+            if (keyState.IsKeyDown(Keys.Up))
+            {
+                p1.keyPressed(Keys.Up);
+            }
+            if (keyState.IsKeyDown(Keys.Down))
+            {
+                p1.keyPressed(Keys.Down);
+            }
+
+            p1.update();
 
             base.Update(gameTime);
         }
