@@ -20,11 +20,14 @@ namespace Last_Templar
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Player p1;
+        public Level level;
         KeyboardState keyState;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 1040;
+            graphics.PreferredBackBufferWidth = 1680;
             Content.RootDirectory = "Content";
         }
 
@@ -37,7 +40,9 @@ namespace Last_Templar
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            p1 = new Player(new Vector2(100,100),100,100, GraphicsDevice);
+            p1 = new Player(new Vector2(100, 0), 100, 100, GraphicsDevice);
+            level = new Level(GraphicsDevice, Content);
+
             base.Initialize();
         }
 
@@ -93,7 +98,7 @@ namespace Last_Templar
                 p1.keyPressed(Keys.Down);
             }
 
-            p1.update();
+            p1.update(level.platforms);
 
             base.Update(gameTime);
         }
@@ -107,6 +112,8 @@ namespace Last_Templar
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+           
+            level.draw(spriteBatch);
             p1.draw(spriteBatch);
             base.Draw(gameTime);
         }
